@@ -1,6 +1,6 @@
 package Bundle::Slash;
 
-$Bundle::Slash::VERSION = '2.13';
+$Bundle::Slash::VERSION = '2.31';
 
 1;
 
@@ -41,21 +41,29 @@ Font::AFM               - ditto
 
 HTML::FormatText        - ditto
 
+HTML::TokeParser
+
+HTML::CalendarMonth	- used for Events plugin
+
 XML::Parser
 
 XML::RSS
+
+XML::Simple
 
 DBI
 
 Data::ShowTable
 
-J/JW/JWIED/Msql-Mysql-modules-1.2216.tar.gz    - instead of Bundle::DBD::mysql (Data::ShowTable)
+J/JW/JWIED/Msql-Mysql-modules-1.2219.tar.gz    - instead of Bundle::DBD::mysql (Data::ShowTable)
+
+Bundle::DBD::mysql	- ???
 
 DBIx::Password
 
 Apache::DBI
 
-Apache::Cookie
+Apache::Request		- libapreq; also includes Apache::Cookie
 
 AppConfig		- Should be installed with TT, but sometimes not?
 
@@ -75,7 +83,9 @@ Time::HiRes
 
 Date::Parse		- TimeDate
 
-Date::Manip             - Still needed, but not for long
+Date::Manip             - Still needed, but only in utils/
+
+Date::Calc		- Use sparingly, only when necessary
 
 Time::ParseDate         - Time-modules; Needed for Schedule::Cron
 
@@ -86,8 +96,5 @@ Schedule::Cron
 
 mod_perl must be installed by hand, because of the special configuration
 required for it.
-
-You might want to do C<force install Net::Cmd> to start the process,
-until libnet tests are fixed.
 
 =cut
